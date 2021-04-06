@@ -41,8 +41,8 @@
                     <th>Links</th>
 
                 </tr>
-                
-                
+
+
                 <tr style="background-color: rgb(144, 255, 80);">
                     <td>1</td>
                     <td>Create a webpage that contain table of employee's details.</td>
@@ -74,23 +74,22 @@
                     <td><a href="https://utsavdabhi.github.io/web_praticals_2_3/tables.html">View</a></td>
                 </tr>
                 <tr style="background-color: rgb(144, 255, 80);">
-                    <td>7.</td>
-                    <td>Coming Soon..</td>
-                    <td><a href="">View</a></td>
+                    <td>7</td>
+                    <td>Audio Effect</td>
+                    <td><a href="https://utsavdabhi.github.io/web_audio/">View</a></td>
                 </tr>
                 <tr style="background-color: rgb(166, 247, 117);">
-                    <td>8.</td>
-                    <td>Coming Soon..</td>
-                    <td><a href="#">View</a></td>
+                    <td>8</td>
+                    <td>Video Effect using javascript</td>
+                    <td><a href="https://utsavdabhi.github.io/web_video/">View</a></td>
                 </tr>
                 <tr style="background-color: rgb(144, 255, 80);">
-                    <td>9.</td>
+                    <td>9</td>
                     <td>Coming Soon..</td>
                     <td><a href="#">View</a></td>
                 </tr>
             </table>
         </div>
-
 
         <div class="detail" id="lab">
             <table class="table">
@@ -145,10 +144,51 @@
                     <td><a href="https://utsavdabhi.github.io/web_praticals_2_3/lab33.html">View</a></td>
                 </tr>
 
+                <tr style="background-color: rgb(144, 255, 80);">
+                <td>4.1</td>
+                <td>Complete form validation name, email, phone number, checkbox etc using JavaScript</td>
+                <td><a href="https://utsavdabhi.github.io/web_praticals_4/">View</a></td>
+                </tr>
+
+                <tr style="background-color: rgb(144, 255, 80);">
+                <td>4.2</td>
+                <td>Login form using HTML & JavaScript with 
+                    validations on uname and password fields.</td>
+                <td><a href="https://utsavdabhi.github.io/web_praticals_4/index2.html">View</a></td>
+                </tr>
+
+                <tr style="background-color: rgb(144, 255, 80);">
+                <td>4.3</td>
+                <td>Javascript program that prints first n Fibonacci numbers.</td>
+                <td><a href="https://utsavdabhi.github.io/web_praticals_4/pr43.html">View</a></td>
+                </tr>
+                
+                <tr style="background-color: rgb(144, 255, 80);">
+                <td>4.4</td>
+                <td>javascript code that displays the text”AHMEDABAD INSTITUTE OF
+                    TECHNOLOGY”
+                    </td>
+                <td><a href="https://utsavdabhi.github.io/web_praticals_4/pr44.html">View</a></td>
+                </tr>
+                
+                <tr style="background-color: rgb(144, 255, 80);">
+                <td>4.5</td>
+                <td>Bulb Example</td>
+                <td><a href="https://webdevelopmenttasksinait.000webhostapp.com/task3.html">View</a></td>
+                </tr>
+                
+                
             </table>
         </div>
     </section>
     <br>
+
+    <div class="counter">
+    <span>Visitors:</span>
+    <div id="count">00</div>
+</div>
+  
+    
     <footer>
         <p>Copyright ©2021 All rights reserved with by Ahmedabad Institute of Technology </p>
         <br>
@@ -169,6 +209,20 @@
             document.getElementById("lec_button").style.backgroundColor = "#000";
             document.getElementById("lab_button").style.backgroundColor = " #000";
         }
+
+        
+
+const counter = document.getElementById('count');
+
+function updatecounter(){
+  fetch('https://api.countapi.xyz/update/utsavdabhi/coco/?amount=1')
+  .then(res => res.json())
+  .then(res => {
+      counter.innerHTML = res.value;
+    })
+
+}
+updatecounter();
 
     </script>
 </body>
